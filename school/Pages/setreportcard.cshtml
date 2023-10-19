@@ -1,0 +1,27 @@
+﻿@page
+@model school.Pages.setreportcardModel
+@{
+}
+
+<div class="d-flex justify-content-center row">
+    <form method="post" class="col-xxl-4 col-xl-6 col-lg-8 d-flex justify-content-center row align-self-center ">
+        <dic class="mb-3">
+            <select class="form-select" data-live-search="true" asp-for="reportcard.classroom.id" aria-label="کلاس مورد نظر زا انتخاب کنید">
+                @{
+                    foreach (var c in Model.classrooms)
+                    {
+                        <option data-tokens="@c.classname" value="@c.id">@c.classname</option>
+                    }
+                }
+            </select>
+            
+        </dic>
+
+        <div class="mb-3">
+            <label asp-for="reportcard.score" class="form-label"></label>
+            <input class="form-control" asp-for="reportcard.score">
+            <span asp-validation-for="reportcard.score" class="text-danger" data-valmsg-replace="true"></span>
+        </div>
+        <input class="col-3 mt-4 btn btn-primary" type="submit" value="ثبت" />
+    </form>
+</div>

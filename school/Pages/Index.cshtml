@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    ViewData["Favico"] = "";
+}
+
+<div class="justify-content-center row">
+    <div class="justify-content-center col-8" dir="rtl">
+        
+        @{
+            foreach(models.student _student in Model.students)
+            {
+                <div class="card text-center mb-3" dir="rtl">
+                    <div class="card-header">
+                        <h3 class="card-title">@_student.fname @_student.lname</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-text"> نام پدر:@_student.fathername</h5>
+                        <h5 class="card-text"> سن:@_student.age</h5>
+                        <h5 class="card-text"> کدملی:@_student.nationalcode</h5>
+                        <h5 class="card-text"> پایه تحصیلی:@_student.grade</h5>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        <a href="studentdetails?studentid=@_student.id" class="btn btn-primary">مشاهده بیشتر</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

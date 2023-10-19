@@ -1,0 +1,27 @@
+﻿@page
+@model school.Pages.addstudenttoclassModel
+@{
+
+    
+}
+<div class="d-flex justify-content-center row">
+    <form method="post" class="col-xxl-4 col-xl-6 col-lg-8 d-flex justify-content-center row align-self-center ">
+        <select class="form-select" data-live-search="true" asp-for="studentid">
+            @{
+                foreach (var s in Model.students)
+                {
+                    <option data-tokens="@s.fname @s.lname" value="@s.id">@s.fname @s.lname</option>
+                }
+            }
+        </select>
+        <select class="form-select" data-live-search="true" asp-for="classroomid">
+            @{
+                foreach (var c in Model.classrooms)
+                {
+                    <option data-tokens="@c.classname" value="@c.id">@c.classname</option>
+                }
+            }
+        </select>
+        <input class="col-3 mt-4 btn btn-primary" type="submit" value="ثبت" />
+    </form>
+</div>

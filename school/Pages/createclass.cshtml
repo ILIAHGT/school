@@ -1,0 +1,24 @@
+﻿@page
+@model school.Pages.createclassModel
+@{
+}
+@Html.ValidationSummary(false,"","text-danger")
+<form class="form row d-flex justify-content-center" method="post" dir="rtl">
+    <div class="">
+        <label asp-for="classroom.classname" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="classroom.classname">
+        <span asp-validation-for="classroom.classname" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="classroom.teachername" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="classroom.teachername">
+        <span asp-validation-for="classroom.teachername" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="classroom.durationofcoursebyhour" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="classroom.durationofcoursebyhour">
+        <span asp-validation-for="classroom.durationofcoursebyhour" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <input class="col-3 mt-4 btn btn-primary" type="submit" value="ثبت" />
+
+</form>

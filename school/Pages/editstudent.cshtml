@@ -1,0 +1,39 @@
+﻿@page
+@model school.Pages.editstudentModel
+@{
+}
+<form class="form row d-flex justify-content-center" method="post" dir="rtl">
+    <div class="">
+        <label asp-for="student.fname" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="student.fname">
+        <span asp-validation-for="student.fname" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="student.lname" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="student.lname">
+        <span asp-validation-for="student.lname" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="student.age" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="student.age">
+        <span asp-validation-for="student.age" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="student.nationalcode" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="student.nationalcode">
+        <span asp-validation-for="student.nationalcode" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="student.fathername" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="student.fathername">
+        <span asp-validation-for="student.fathername" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+    <div class="">
+        <label asp-for="student.grade" class="form-label"></label>
+        <input class="form-control rounded-3" asp-for="student.grade">
+        <span asp-validation-for="student.grade" class="text-danger" data-valmsg-replace="true"></span>
+    </div>
+
+    <input class="col-3 mt-4 btn btn-primary" type="submit" value="ثبت" />
+
+</form>
